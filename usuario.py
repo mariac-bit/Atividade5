@@ -1,23 +1,20 @@
 class Usuario:
-    nome = ""
-    senha = ""
-    codigo = ""
-    pag_visitadas = 0
+    def __init__(self):
+        self.nome = ""
+        self.__senha = ""
+        self._codigo = ""
+        self.pag_visitadas = 0
 
     def setDados(self, nome):
         self.nome = nome
     def getDados(self):
         print(">Nome: "+self.nome)
-    def setSenha(self, senha: str):
+    def setSenha(self, senha):
         if len(senha)>8:
-            self._senha = senha
+            self.__senha = senha
     def getSenha(self):
-        return self._senha
+        return self.__senha
     def getCodigo(self):
-        return self.codigo
+        return self._codigo
     def setCodigo(self, cod):
-        self.codigo = cod
-    def getpag_visitadas(self):
-        return self.pag_visitadas
-    def setpag_visitadas(self):
-        self.pag_visitadas +=1
+        self._codigo = cod
